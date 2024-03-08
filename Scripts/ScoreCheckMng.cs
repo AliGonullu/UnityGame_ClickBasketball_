@@ -13,4 +13,11 @@ public class ScoreCheckMng : MonoBehaviour
     {
         basket.setScoreCheck(true);
     }
+    private void OnTriggerExit2D(Collider2D ball)
+    {
+        if(ball.gameObject.transform.position.y > transform.position.y)
+        {
+            basket.setScoreCheck(false);
+        }
+    }
 }
